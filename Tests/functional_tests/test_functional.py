@@ -1,5 +1,7 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
 import unittest
 import os
 import sys
@@ -9,6 +11,7 @@ import argparse
 class FunctionalTests(unittest.TestCase):
 
 	def setUp(self):
+		service = Service(executable_path=os.path.join(os.environ["CHROMEWEBDRIVER"])
 		options = webdriver.ChromeOptions()
 		options.add_argument('--headless')
 		options.add_argument('--no-sandbox')
