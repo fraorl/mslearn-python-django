@@ -98,12 +98,12 @@ stages:
               versionSpec: '$(pythonVersion)'
             displayName: 'Use Python version'
 
-          #- task: AzureWebApp@1
-          #  displayName: 'Deploy Azure Web App : ccai001'
-          #  inputs:
-          #    azureSubscription: $(azureServiceConnectionId)
-          #    appName: $(webAppName)
-          #    package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : ccai001'
+            inputs:
+              azureSubscription: $(azureServiceConnectionId)
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
  
           - script: |
               pip install selenium
