@@ -16,7 +16,7 @@ class FunctionalTests(unittest.TestCase):
 		options.add_argument('--headless')
 		options.add_argument('--no-sandbox')
 		options.add_argument('--disable-dev-shm-usage')
-		self.driver =webdriver.Chrome(service=self.s, options=options-driverop)
+		self.driver =webdriver.Chrome(service=self.s, options=options)
 
 	"""
 	The current time taken by the webapp to refresh after deployment is a considerable amount and the selenium tests
